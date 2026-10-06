@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import Svg, { Path, G, Rect, Text as SvgText } from 'react-native-svg';
 import { colors, fonts } from '../theme';
 
@@ -22,7 +22,7 @@ export default function Logo({ width = 180, height = 40, showText = true, textCo
         viewBox={showText ? '0 0 190 40' : '0 0 40 40'}
         fill="none"
         accessibilityLabel="Little Lemon Logo"
-        accessible={true}
+        accessible={Platform.OS !== 'web' ? true : undefined}
       >
         {/* Lemon Icon Mark */}
         <G transform="translate(2, 2)">

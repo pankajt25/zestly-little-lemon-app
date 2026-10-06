@@ -34,7 +34,7 @@ import {
 } from '../database';
 import { getProfile } from '../storage/profileStorage';
 import { colors, fonts, spacing, borderRadius } from '../theme';
-import { AuthContext } from '../navigation/RootNavigator';
+import { AuthContext, ROUTES } from '../navigation/routes';
 
 const API_URL =
   'https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/capstone.json';

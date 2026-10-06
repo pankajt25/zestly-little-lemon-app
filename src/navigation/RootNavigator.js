@@ -4,7 +4,7 @@
  * Reads AsyncStorage onboarding status to prevent Onboarding flash for returning users.
  */
 
-import React, { useState, useEffect, useMemo, createContext } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Onboarding from '../screens/Onboarding';
@@ -12,14 +12,9 @@ import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import Splash from '../screens/Splash';
 import { getProfile } from '../storage/profileStorage';
+import { AuthContext, ROUTES } from './routes';
 
-export const AuthContext = createContext({
-  isOnboardingCompleted: false,
-  userProfile: null,
-  login: async () => {},
-  logout: async () => {},
-  updateProfile: () => {},
-});
+export { AuthContext };
 
 const Stack = createNativeStackNavigator();
 

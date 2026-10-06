@@ -22,7 +22,7 @@ import Hero from '../components/Hero';
 import { isValidFirstName, isValidEmail } from '../utils/validation';
 import { saveOnboarding } from '../storage/profileStorage';
 import { colors, fonts, spacing, borderRadius } from '../theme';
-import { AuthContext } from '../navigation/RootNavigator';
+import { AuthContext, ROUTES } from '../navigation/routes';
 
 export default function Onboarding({ navigation }) {
   const [firstName, setFirstName] = useState('');

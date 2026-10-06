@@ -37,7 +37,7 @@ import {
   formatPhoneNumber,
 } from '../utils/validation';
 import { colors, fonts, spacing, borderRadius } from '../theme';
-import { AuthContext } from '../navigation/RootNavigator';
+import { AuthContext, ROUTES } from '../navigation/routes';
 
 export default function Profile({ navigation }) {
   const authContext = useContext(AuthContext);
